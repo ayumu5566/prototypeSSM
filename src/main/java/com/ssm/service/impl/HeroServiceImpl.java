@@ -24,6 +24,13 @@ public class HeroServiceImpl implements HeroService {
 	}
 
 	/**
+	 * 修改英雄
+	 */
+	public void update(Hero hero) {
+		heroDao.update(hero);
+	}
+
+	/**
 	 * 根据ID查询英雄
 	 */
 	public Hero get(Integer id) {

@@ -19,6 +19,14 @@ public interface HeroDao {
 	public void add(Hero hero);
 
 	/**
+	 * ÐÞ¸ÄÓ¢ÐÛ
+	 * 
+	 * @param hero
+	 *            Ó¢ÐÛ
+	 */
+	public void update(Hero hero);
+
+	/**
 	 * ¸ù¾ÝID²éÑ¯Ó¢ÐÛ
 	 * 
 	 * @param id

@@ -45,6 +45,35 @@ public class HeroController {
 	}
 
 	/**
+	 * Ìø×ªÐÞ¸ÄÒ³Ãæ
+	 * 
+	 * @param model
+	 * @param id
+	 *            Ó¢ÐÛID
+	 * @return
+	 */
+	@RequestMapping("/updatePage")
+	public String updatePage(Model model, @RequestParam(value = "id", required = true) Integer id) {
+		Hero hero = heroService.get(id);
+		model.addAttribute("hero", hero);
+		return "heroEdit";
+	}
+
+	/**
+	 * ÐÞ¸ÄÓ¢ÐÛ
+	 * 
+	 * @param response
+	 * @param hero
+	 *            Ó¢ÐÛ
+	 * @throws IOException
+	 */
+	@RequestMapping("/update")
+	public void update(HttpServletResponse response, Hero hero) throws IOException {
+		heroService.update(hero);
+		response.sendRedirect("list");
+	}
+
+	/**
 	 * ¸ù¾ÝID²éÑ¯Ó¢ÐÛ
 	 * 
 	 * @param model

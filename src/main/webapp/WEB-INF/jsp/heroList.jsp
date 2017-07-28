@@ -26,6 +26,7 @@
 				<td>${hero.damage}</td>
 				<td>
 					<a href="detail?id=${hero.id}">详情</a>
+					<a href="updatePage?id=${hero.id}">编辑</a>
 					<a href="delete?id=${hero.id}">删除</a>
 				</td>
 			</tr>

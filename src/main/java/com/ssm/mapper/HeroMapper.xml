@@ -16,8 +16,18 @@
 			#{name},
 			#{hp},
 			#{damage}
-		);
+		)
 	</insert>
+
+	<update id="update">
+		UPDATE t_lol_hero
+		SET 
+		 name = #{name},
+		 hp = #{hp},
+		 damage = #{damage}
+		WHERE
+			id = #{id}
+	</update>
 
 	<delete id="delete">
 		DELETE FROM t_lol_hero WHERE id = #{id}
