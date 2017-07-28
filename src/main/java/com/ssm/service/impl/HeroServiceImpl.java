@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ssm.dao.HeroDao;
 import com.ssm.entity.Hero;
 import com.ssm.service.HeroService;
+import com.ssm.utils.Page;
 
 @Service
 public class HeroServiceImpl implements HeroService {
@@ -19,4 +20,11 @@ public class HeroServiceImpl implements HeroService {
 		return heroDao.findList();
 	}
 
+	public List<Hero> findList(Page page) {
+		return heroDao.findList(page);
+	}
+
+	public Integer total() {
+		return heroDao.total();
+	}
 }

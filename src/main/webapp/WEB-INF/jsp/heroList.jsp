@@ -8,7 +8,7 @@
 <title>英雄列表</title>
 </head>
 <body>
-	<table>
+	<table border="8">
 		<tr>
 			<td>id</td>
 			<td>姓名</td>
@@ -25,5 +25,13 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<div>
+		共${total}条记录
+		当前${page.nowPage}/${page.totalPage}页
+		<a href="?start=0">首页</a>
+		<a href="?start=${page.pre}">上一页</a>
+		<a href="?start=${page.next}">下一页</a>
+		<a href="?start=${page.last}">末页</a>
+	</div>
 </body>
 </html>
