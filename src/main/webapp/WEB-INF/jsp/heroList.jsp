@@ -8,6 +8,7 @@
 <title>英雄列表</title>
 </head>
 <body>
+	<div><a href="addPage">新增</a></div>
 	<table border="8">
 		<tr>
 			<td>id</td>
