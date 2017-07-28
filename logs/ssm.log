@@ -382,4 +382,50 @@
   [INFO] [2017-07-28 15:13:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage/] onto handler 'heroController'
   [INFO] [2017-07-28 15:13:15][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 1852 ms
   [WARN] [2017-07-28 15:13:41][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'SpringMVC'
+  [INFO] [2017-07-28 15:33:32][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+  [INFO] [2017-07-28 15:33:32][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Fri Jul 28 15:33:32 CST 2017]; root of context hierarchy
+  [INFO] [2017-07-28 15:33:33][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+  [INFO] [2017-07-28 15:33:34][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+  [INFO] [2017-07-28 15:33:34][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-07-28 15:33:35][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 2584 ms
+  [INFO] [2017-07-28 15:33:35][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+  [INFO] [2017-07-28 15:33:35][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Fri Jul 28 15:33:35 CST 2017]; parent: Root WebApplicationContext
+  [INFO] [2017-07-28 15:33:35][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+  [INFO] [2017-07-28 15:33:35][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add.*] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add/] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail.*] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail/] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list.*] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list/] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage.*] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage/] onto handler 'heroController'
+  [INFO] [2017-07-28 15:33:36][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 1363 ms
+  [INFO] [2017-07-28 16:16:08][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+  [INFO] [2017-07-28 16:16:10][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Fri Jul 28 16:16:09 CST 2017]; root of context hierarchy
+  [INFO] [2017-07-28 16:16:10][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+  [INFO] [2017-07-28 16:16:14][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+  [INFO] [2017-07-28 16:16:14][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-07-28 16:16:18][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 10083 ms
+  [INFO] [2017-07-28 16:16:18][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+  [INFO] [2017-07-28 16:16:18][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Fri Jul 28 16:16:18 CST 2017]; parent: Root WebApplicationContext
+  [INFO] [2017-07-28 16:16:18][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+  [INFO] [2017-07-28 16:16:19][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add.*] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/add/] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail.*] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/detail/] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list.*] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/list/] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage.*] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/hero/addPage/] onto handler 'heroController'
+  [INFO] [2017-07-28 16:16:22][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 4017 ms
   
