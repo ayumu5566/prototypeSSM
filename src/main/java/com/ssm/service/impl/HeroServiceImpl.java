@@ -31,6 +31,13 @@ public class HeroServiceImpl implements HeroService {
 	}
 
 	/**
+	 * 根据ID删除英雄
+	 */
+	public void delete(Integer id) {
+		heroDao.delete(id);
+	}
+
+	/**
 	 * 查询英雄列表（无分页）
 	 */
 	public List<Hero> findList() {

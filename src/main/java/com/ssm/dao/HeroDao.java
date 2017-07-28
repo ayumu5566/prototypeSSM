@@ -28,6 +28,14 @@ public interface HeroDao {
 	public Hero get(Integer id);
 
 	/**
+	 * 根据ID删除英雄
+	 * 
+	 * @param id
+	 *            英雄ID
+	 */
+	public void delete(Integer id);
+
+	/**
 	 * 查询英雄列表（无分页）
 	 * 
 	 * @return 英雄列表

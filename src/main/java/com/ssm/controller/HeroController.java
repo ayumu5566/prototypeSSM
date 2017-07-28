@@ -60,6 +60,21 @@ public class HeroController {
 	}
 
 	/**
+	 * 根据ID删除英雄
+	 * 
+	 * @param response
+	 * @param id
+	 *            英雄ID
+	 * @throws IOException
+	 */
+	@RequestMapping("delete")
+	public void delete(HttpServletResponse response, @RequestParam(value = "id", required = true) Integer id)
+			throws IOException {
+		heroService.delete(id);
+		response.sendRedirect("list");
+	}
+
+	/**
 	 * 查询英雄列表（分页）
 	 * 
 	 * @param model

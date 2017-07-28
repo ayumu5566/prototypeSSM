@@ -24,7 +24,10 @@
 				<td>${hero.name}</td>
 				<td>${hero.hp}</td>
 				<td>${hero.damage}</td>
-				<td><a href="detail?id=${hero.id}">详情</a></td>
+				<td>
+					<a href="detail?id=${hero.id}">详情</a>
+					<a href="delete?id=${hero.id}">删除</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
