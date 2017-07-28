@@ -16,6 +16,15 @@ public interface HeroService {
 	public void add(Hero hero);
 
 	/**
+	 * 根据ID查询英雄
+	 * 
+	 * @param id
+	 *            英雄ID
+	 * @return 英雄
+	 */
+	public Hero get(Integer id);
+
+	/**
 	 * 查询英雄列表（无分页）
 	 * 
 	 * @return 英雄列表

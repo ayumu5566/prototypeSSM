@@ -24,6 +24,13 @@ public class HeroServiceImpl implements HeroService {
 	}
 
 	/**
+	 * 根据ID查询英雄
+	 */
+	public Hero get(Integer id) {
+		return heroDao.get(id);
+	}
+
+	/**
 	 * 查询英雄列表（无分页）
 	 */
 	public List<Hero> findList() {

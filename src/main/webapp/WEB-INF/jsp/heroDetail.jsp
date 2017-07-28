@@ -4,15 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>新增英雄</title>
+<title>英雄详情</title>
 </head>
 <body>
-	<form action="add" method="post">
-		姓名：<input type="text" id="name" name="name"><br>
-		血量：<input type="text" id="hp" name="hp"><br>
-		攻击：<input type="text" id="damage" name="damage"><br>
-		<input type="submit" value="新增">
-	</form>
+	<div>${hero.name}</div>
+	<div>${hero.hp}</div>
+	<div>${hero.damage}</div>
 	<div><a href="list">返回</a></div>
 </body>
 </html>

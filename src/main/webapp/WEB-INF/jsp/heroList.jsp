@@ -15,6 +15,7 @@
 			<td>姓名</td>
 			<td>血量</td>
 			<td>攻击</td>
+			<td>操作</td>
 		</tr>
 
 		<c:forEach items="${heroList}" var="hero">
@@ -23,6 +24,7 @@
 				<td>${hero.name}</td>
 				<td>${hero.hp}</td>
 				<td>${hero.damage}</td>
+				<td><a href="detail?id=${hero.id}">详情</a></td>
 			</tr>
 		</c:forEach>
 	</table>

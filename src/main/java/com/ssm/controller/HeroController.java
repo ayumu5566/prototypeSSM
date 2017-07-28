@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ssm.entity.Hero;
 import com.ssm.service.HeroService;
@@ -41,6 +42,21 @@ public class HeroController {
 	public void add(HttpServletResponse response, Hero hero) throws IOException {
 		heroService.add(hero);
 		response.sendRedirect("list");
+	}
+
+	/**
+	 * ¸ù¾ÝID²éÑ¯Ó¢ÐÛ
+	 * 
+	 * @param model
+	 * @param id
+	 *            Ó¢ÐÛID
+	 * @return
+	 */
+	@RequestMapping("detail")
+	public String get(Model model, @RequestParam(value = "id", required = true) Integer id) {
+		Hero hero = heroService.get(id);
+		model.addAttribute("hero", hero);
+		return "heroDetail";
 	}
 
 	/**

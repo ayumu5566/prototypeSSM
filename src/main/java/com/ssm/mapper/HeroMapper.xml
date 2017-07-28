@@ -19,14 +19,26 @@
 		);
 	</insert>
 
+	<select id="get" resultType="com.ssm.entity.Hero">
+		SELECT
+			h.id AS `id`,
+			h.name AS `name`,
+			h.hp AS `hp`,
+			h.damage AS `damage`
+		FROM
+			t_lol_hero h
+		WHERE
+			id = #{id}
+	</select>
+
 	<select id="findList" resultType="com.ssm.entity.Hero">
 		SELECT
-		h.id AS `id`,
-		h.name AS `name`,
-		h.hp AS `hp`,
-		h.damage AS `damage`
+			h.id AS `id`,
+			h.name AS `name`,
+			h.hp AS `hp`,
+			h.damage AS `damage`
 		FROM
-		t_lol_hero h
+			t_lol_hero h
 		<if test="start!=null and count!=null">
 			limit #{start},#{count}
 		</if>
@@ -34,8 +46,8 @@
 
 	<select id="total" resultType="int">
 		SELECT
-		COUNT(1)
+			COUNT(1)
 		FROM
-		t_lol_hero
+			t_lol_hero
 	</select>
 </mapper>
