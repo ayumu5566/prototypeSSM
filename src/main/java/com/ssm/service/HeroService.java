@@ -1,6 +1,7 @@
 package com.ssm.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.ssm.entity.Hero;
 import com.ssm.utils.Page;
@@ -54,7 +55,7 @@ public interface HeroService {
 	 *            分页
 	 * @return 英雄列表
 	 */
-	public List<Hero> findList(Page page);
+	public List<Hero> findList(Map<String, Object> map, Page page);
 
 	/**
 	 * 统计英雄数量

@@ -3,9 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<script type="text/javascript" src="/static/js/jquery.min.js"></script>
-<link href="/static/css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/libs/jquery/jquery-3.2.1.min.js"></script>
+<link href="/static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="/static/libs/bootstrap/js/bootstrap.min.js"></script>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>英雄列表</title>
@@ -17,32 +17,47 @@
 			<div class="div_btn">
 				<a href="addPage" class="btn btn-default">新增</a>
 			</div>
-			<table class="table">
-				<tr>
-					<td>id</td>
-					<td>姓名</td>
-					<td>血量</td>
-					<td>攻击</td>
-					<td>操作</td>
-				</tr>
-		
-				<c:forEach items="${heroList}" var="hero">
-					<tr>
-						<td>${hero.id}</td>
-						<td>${hero.name}</td>
-						<td>${hero.hp}</td>
-						<td>${hero.damage}</td>
-						<td>
-							<a href="detail?id=${hero.id}" class="btn btn-link">详情</a>
-							<a href="updatePage?id=${hero.id}" class="btn btn-link">编辑</a>
-							<a href="delete?id=${hero.id}" class="btn btn-link">删除</a>
-						</td>
-					</tr>
-				</c:forEach>
-			</table>
+			<form id="searchForm" action="list" method="get">
+				<div>
+					<label for="name">姓名：</label>
+					<input type="text" id="name" name="name" value="${map.name}" class="form-control input_search_text"/>
+					
+					<label for="hp">血量：</label>
+					<input type="text" id="hp" name="hp" value="${map.hp}" class="form-control input_search_text"/>
+					
+					<label for="damage">攻击：</label>
+					<input type="text" id="damage" name="damage" value="${map.damage}" class="form-control input_search_text"/>
+
+					<input type="submit" id="search" value="查询" class="btn btn-primary" />
+					<button id="resetBtn" class="btn btn-danger">重置</button>
+				</div>
+			</form>
 		</div>
+		<table class="table">
+			<tr>
+				<td>id</td>
+				<td>姓名</td>
+				<td>血量</td>
+				<td>攻击</td>
+				<td>操作</td>
+			</tr>
+	
+			<c:forEach items="${heroList}" var="hero">
+				<tr>
+					<td>${hero.id}</td>
+					<td>${hero.name}</td>
+					<td>${hero.hp}</td>
+					<td>${hero.damage}</td>
+					<td>
+						<a href="detail?id=${hero.id}" class="btn btn-link">详情</a>
+						<a href="updatePage?id=${hero.id}" class="btn btn-link">编辑</a>
+						<a href="delete?id=${hero.id}" class="btn btn-link">删除</a>
+					</td>
+				</tr>
+			</c:forEach>
+		</table>
 		<div class="div_page">
-			<div class="div_total">共${total}条记录 当前${page.nowPage}/${page.totalPage}页</div>
+			<div style="margin-top: 16px;">共${total}条记录 当前${page.nowPage}/${page.totalPage}页</div>
 			<div class="pager">
 				<li><a href="?start=0" <c:if test="${page.nowPage == 1}">class="btn disabled"</c:if>>首页</a></li>
 			</div>
@@ -79,9 +94,23 @@
 </body>
 </html>
 <script>
-   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+	$(function() {
+		$("[data-toggle='tooltip']").tooltip(); 
+	});
+	
+	$(function() {
+		$('#resetBtn').click(function(){  
+			$(':input','#searchForm').not(':button,:submit,:reset,:hidden').val('')
+		});  
+	});
+	
 </script>
 <style>
+.input_search_text {
+	width: 200px;
+	display: inline-block;
+}
+
 .table_hero {
 	text-align: center;
 }
@@ -98,9 +127,5 @@
 .div_page div {
 	float: left;
 	margin: 10px;
-}
-
-.div_total {
-	margin: 17px;
 }
 </style>

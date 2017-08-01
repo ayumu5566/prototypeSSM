@@ -53,8 +53,18 @@
 			h.damage AS `damage`
 		FROM
 			t_lol_hero h
-		<if test="start!=null and count!=null">
-			limit #{start},#{count}
+		WHERE 1=1
+		<if test="map.name != null and map.name != ''">
+		    AND h.name LIKE concat('%',#{map.name},'%')
+		</if>
+		<if test="map.hp != null">
+		    AND h.hp = #{map.hp}
+		</if>
+		<if test="map.damage != null">
+		    AND h.damage = #{map.damage}
+		</if>
+		<if test="page.start != null and page.count != null">
+			LIMIT #{page.start},#{page.count}
 		</if>
 	</select>
 

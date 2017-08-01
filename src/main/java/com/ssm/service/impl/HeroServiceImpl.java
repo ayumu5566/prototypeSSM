@@ -1,6 +1,7 @@
 package com.ssm.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,8 +55,8 @@ public class HeroServiceImpl implements HeroService {
 	/**
 	 * 查询英雄列表（分页）
 	 */
-	public List<Hero> findList(Page page) {
-		return heroDao.findList(page);
+	public List<Hero> findList(Map<String, Object> map, Page page) {
+		return heroDao.findList(map, page);
 	}
 
 	/**

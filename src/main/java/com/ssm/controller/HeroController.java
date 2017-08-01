@@ -1,8 +1,11 @@
 package com.ssm.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -112,14 +115,31 @@ public class HeroController {
 	 * @return
 	 */
 	@RequestMapping("/list")
-	public String list(Model model, Page page) {
-		List<Hero> heroList = heroService.findList(page);
+	public String list(HttpServletRequest request, Model model, Page page,
+			@RequestParam(value = "name", required = false) String name,
+			@RequestParam(value = "hp", required = false) Float hp,
+			@RequestParam(value = "damage", required = false) Integer damage) {
+
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		if (null != name) {
+			map.put("name", name);
+		}
+		if (null != hp) {
+			map.put("hp", hp);
+		}
+		if (null != damage) {
+			map.put("damage", damage);
+		}
+
+		List<Hero> heroList = heroService.findList(map, page);
 		Integer total = heroService.total();
 		page.caculateLast(total);
 
 		model.addAttribute("total", total);
 		model.addAttribute("page", page);
 		model.addAttribute("heroList", heroList);
+		model.addAttribute("map", map);
 		return "heroList";
 	}
 }

@@ -1,7 +1,9 @@
 package com.ssm.dao;
 
 import java.util.List;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.ssm.entity.Hero;
@@ -57,7 +59,7 @@ public interface HeroDao {
 	 *            分页
 	 * @return 英雄列表
 	 */
-	public List<Hero> findList(Page page);
+	public List<Hero> findList(@Param("map") Map<String, Object> map, @Param("page") Page page);// 使用注解方式传递参数
 
 	/**
 	 * 统计英雄数量
